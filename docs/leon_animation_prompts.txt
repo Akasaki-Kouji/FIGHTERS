@@ -1,0 +1,199 @@
+================================================================
+LEON - アニメーション生成プロンプト集（画像参照方式）
+================================================================
+
+----------------------------------------------------------------
+【手順】
+----------------------------------------------------------------
+
+1. ChatGPT に確定済みのレオン画像（レオン.png）を貼り付ける
+2. 最初に下の「セッション開始文」を送る
+3. あとは各アニメのプロンプトをそのまま送るだけ
+4. 同じチャットセッションを維持することで一貫性が保たれる
+
+
+----------------------------------------------------------------
+【セッション開始文】※画像と一緒に最初に送る
+----------------------------------------------------------------
+
+This is the reference character design for Leon.
+Please use this exact visual style, outfit, colors, and proportions
+for all sprite animations I will request in this session.
+Art style: pixel art, clean sharp outlines, no anti-aliasing,
+transparent background, same style as KOF / SNK fighting games.
+Camera angle: 2D side-scrolling fighting game perspective (like KOF or Street Fighter).
+The character always faces right. Do NOT use a front-facing or 3/4 perspective.
+Each frame size: 64x128 pixels.
+Confirm you have memorized this character before I send animation requests.
+
+
+----------------------------------------------------------------
+【アニメーション別プロンプト】※1つずつ送る
+----------------------------------------------------------------
+
+■ idle.png（4フレーム）
+Using the Leon reference, create a pixel art sprite sheet.
+Side view, 2D fighting game perspective (like KOF). Character faces right.
+Animation: idle breathing loop, subtle chest movement and slight swaying.
+Layout: horizontal strip, 4 frames side by side, no gaps.
+Each frame 64x128 pixels, transparent background.
+Keep face and head identical to the reference. Only animate the body.
+
+----
+
+■ walk_f.png（6フレーム）
+Using the Leon reference, create a pixel art sprite sheet.
+Side view, 2D fighting game perspective (like KOF). Character faces right and walks to the right.
+Lateral walk cycle, NOT walking toward the camera.
+Animation: walk forward cycle, coat swaying naturally with each step.
+Layout: horizontal strip, 6 frames side by side, no gaps.
+Each frame 64x128 pixels, transparent background.
+Keep face and head identical to the reference. Only animate the body and limbs.
+
+----
+
+■ walk_b.png（4フレーム）
+Using the Leon reference, create a pixel art sprite sheet.
+Side view, 2D fighting game perspective (like KOF). Character faces right and walks to the left.
+Lateral walk cycle, NOT walking toward the camera.
+Animation: walk backward cycle, cautious backstep, eyes still facing right.
+Layout: horizontal strip, 4 frames side by side, no gaps.
+Each frame 64x128 pixels, transparent background.
+Keep face and head identical to the reference. Only animate the body and limbs.
+
+----
+
+■ crouch.png（2フレーム）
+Using the Leon reference, create a pixel art sprite sheet.
+Side view, 2D fighting game perspective (like KOF). Character faces right.
+Animation: crouching stance. Frame 1: transitioning down, Frame 2: low guard crouch held.
+Layout: horizontal strip, 2 frames side by side, no gaps.
+Each frame 64x128 pixels, transparent background.
+Keep face and head identical to the reference. Only animate the body and limbs.
+
+----
+
+■ jump.png（3フレーム）
+Using the Leon reference, create a pixel art sprite sheet.
+Side view, 2D fighting game perspective (like KOF). Character faces right.
+Animation: jump sequence. Frame 1: squat windup, Frame 2: airborne coat flowing up,
+Frame 3: landing impact.
+Layout: horizontal strip, 3 frames side by side, no gaps.
+Each frame 64x128 pixels, transparent background.
+Keep face and head identical to the reference. Only animate the body and limbs.
+
+----
+
+■ atk_5a.png（3フレーム）
+Using the Leon reference, create a pixel art sprite sheet.
+Side view, 2D fighting game perspective (like KOF). Character faces right, attacking to the right.
+Animation: light quick jab with left fist.
+Frame 1: windup, Frame 2: fist extended to the right, Frame 3: retracting.
+Layout: horizontal strip, 3 frames side by side, no gaps.
+Each frame 64x128 pixels, transparent background.
+Keep face and head identical to the reference. Only animate the body and limbs.
+
+----
+
+■ atk_5b.png（3フレーム）
+Using the Leon reference, create a pixel art sprite sheet.
+Side view, 2D fighting game perspective (like KOF). Character faces right, attacking to the right.
+Animation: medium front kick with right leg.
+Frame 1: raising knee, Frame 2: leg fully extended to the right, Frame 3: recovering.
+Layout: horizontal strip, 3 frames side by side, no gaps.
+Each frame 64x128 pixels, transparent background.
+Keep face and head identical to the reference. Only animate the body and limbs.
+
+----
+
+■ atk_5c.png（4フレーム）
+Using the Leon reference, create a pixel art sprite sheet.
+Side view, 2D fighting game perspective (like KOF). Character faces right, attacking to the right.
+Animation: heavy wide sword-hand slash.
+Frame 1: winding arm back, Frame 2: mid-swing, Frame 3: arm fully extended to the right,
+Frame 4: follow-through recovery.
+Layout: horizontal strip, 4 frames side by side, no gaps.
+Each frame 64x128 pixels, transparent background.
+Keep face and head identical to the reference. Only animate the body and limbs.
+
+----
+
+■ atk_5d.png（3フレーム）
+Using the Leon reference, create a pixel art sprite sheet.
+Side view, 2D fighting game perspective (like KOF). Character faces right, lunging to the right.
+Animation: special lunging shoulder strike.
+Frame 1: crouching lean forward, Frame 2: full low lunge to the right, Frame 3: skidding stop.
+Layout: horizontal strip, 3 frames side by side, no gaps.
+Each frame 64x128 pixels, transparent background.
+Keep face and head identical to the reference. Only animate the body and limbs.
+
+----
+
+■ guard.png（2フレーム）
+Using the Leon reference, create a pixel art sprite sheet.
+Side view, 2D fighting game perspective (like KOF). Character faces right.
+Animation: blocking guard. Frame 1: raising arms to guard, Frame 2: held guard pose.
+Layout: horizontal strip, 2 frames side by side, no gaps.
+Each frame 64x128 pixels, transparent background.
+Keep face and head identical to the reference. Only animate the body and limbs.
+
+----
+
+■ hit_stand.png（2フレーム）
+Using the Leon reference, create a pixel art sprite sheet.
+Side view, 2D fighting game perspective (like KOF). Character faces right, hit from the right.
+Animation: standing hit reaction. Frame 1: head snapping back recoiling,
+Frame 2: stumbling stagger.
+Layout: horizontal strip, 2 frames side by side, no gaps.
+Each frame 64x128 pixels, transparent background.
+Keep face and head identical to the reference. Only animate the body and limbs.
+
+----
+
+■ knockdown.png（3フレーム）
+Using the Leon reference, create a pixel art sprite sheet.
+Side view, 2D fighting game perspective (like KOF). Character faces right.
+Animation: knockdown. Frame 1: falling backward to the left, Frame 2: lying on ground,
+Frame 3: beginning to rise.
+Layout: horizontal strip, 3 frames side by side, no gaps.
+Each frame 64x128 pixels, transparent background.
+Keep face and head identical to the reference. Only animate the body and limbs.
+
+
+----------------------------------------------------------------
+【うまくいかないときの追加文】
+----------------------------------------------------------------
+
+カメラ視点がおかしい場合（正面・斜めになる）:
+"Side view only. This is a 2D fighting game like KOF or Street Fighter.
+The character must be viewed from the side, NOT front-facing, NOT 3/4 angle,
+NOT walking toward the camera."
+
+横並びにならない場合:
+"Please place all frames in a single horizontal row, left to right, no vertical stacking."
+
+背景が白い場合:
+"The background must be fully transparent (no white background)."
+
+キャラのデザインがブレた場合:
+"Please refer back to the original Leon reference image I sent at the start of this session."
+
+
+----------------------------------------------------------------
+【保存先】
+----------------------------------------------------------------
+
+figters/assets/sprites/leon/idle.png
+figters/assets/sprites/leon/walk_f.png
+figters/assets/sprites/leon/walk_b.png
+figters/assets/sprites/leon/crouch.png
+figters/assets/sprites/leon/jump.png
+figters/assets/sprites/leon/atk_5a.png
+figters/assets/sprites/leon/atk_5b.png
+figters/assets/sprites/leon/atk_5c.png
+figters/assets/sprites/leon/atk_5d.png
+figters/assets/sprites/leon/guard.png
+figters/assets/sprites/leon/hit_stand.png
+figters/assets/sprites/leon/knockdown.png
+
+================================================================

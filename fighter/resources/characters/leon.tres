@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/data/character_data.gd" id="1_charscript"]
+
+[resource]
+script = ExtResource("1_charscript")
+display_name = "Leon"
+max_hp = 100
+walk_f_speed = 320.0
+walk_b_speed = 240.0
+jump_power = 520.0
+gravity = 1500.0
+display_scale = 0.13
+sprite_dir = "res://assets/sprites/leon/"
+animations = {
+"idle": {"file": "idle.png", "frames": 4, "fps": 3.0, "loop": true},
+"walk_f": {"file": "walk_f.png", "frames": 6, "fps": 10.0, "loop": true},
+"walk_b": {"file": "walk_b.png", "frames": 4, "fps": 8.0, "loop": true},
+"crouch": {"file": "crouch.png", "frames": 2, "fps": 8.0, "loop": false},
+"jump": {"file": "jump.png", "frames": 3, "fps": 8.0, "loop": false},
+"atk_5a": {"file": "atk_5a.png", "frames": 3, "fps": 14.0, "loop": false},
+"atk_5b": {"file": "atk_5b.png", "frames": 3, "fps": 12.0, "loop": false},
+"atk_5c": {"file": "atk_5c.png", "frames": 4, "fps": 12.0, "loop": false},
+"atk_5d": {"file": "atk_5d.png", "frames": 3, "fps": 12.0, "loop": false},
+"guard": {"file": "guard.png", "frames": 2, "fps": 10.0, "loop": false},
+"hit_stand": {"file": "hit_stand.png", "frames": 2, "fps": 10.0, "loop": false},
+"knockdown": {"file": "knockdown.png", "frames": 3, "fps": 8.0, "loop": false}
+}
+attacks = {}

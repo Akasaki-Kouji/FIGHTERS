@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p /c/Users/soumu/source/FIGHTERS2/fighter/assets/sprites/leon /c/Users/soumu/source/FIGHTERS2/fighter/scripts/data /c/Users/soumu/source/FIGHTERS2/fighter/scripts/fighter/states /c/Users/soumu/source/FIGHTERS2/fighter/scripts/match /c/Users/soumu/source/FIGHTERS2/fighter/resources/characters /c/Users/soumu/source/FIGHTERS2/fighter/resources/sprite_frames /c/Users/soumu/source/FIGHTERS2/fighter/scenes)",
+      "Bash(cp /c/Users/soumu/source/FIGHTERS2/image/atk_5a.png /c/Users/soumu/source/FIGHTERS2/image/atk_5b.png /c/Users/soumu/source/FIGHTERS2/image/atk_5c.png /c/Users/soumu/source/FIGHTERS2/image/atk_5d.png /c/Users/soumu/source/FIGHTERS2/image/crouch.png /c/Users/soumu/source/FIGHTERS2/image/guard.png /c/Users/soumu/source/FIGHTERS2/image/hit_stand.png /c/Users/soumu/source/FIGHTERS2/image/idle.png /c/Users/soumu/source/FIGHTERS2/image/jump.png /c/Users/soumu/source/FIGHTERS2/image/knockdown.png /c/Users/soumu/source/FIGHTERS2/image/walk_b.png /c/Users/soumu/source/FIGHTERS2/image/walk_f.png /c/Users/soumu/source/FIGHTERS2/fighter/assets/sprites/leon/)",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"C:\\\\Users\\\\soumu\\\\source\\\\FIGHTERS2\\\\new\\\\idle.png\"\\); \"Size: {0} x {1}\" -f $img.Width, $img.Height; \"Frame count = 4 → frame size = {0} x {1}\" -f \\($img.Width / 4\\), $img.Height; $img.Dispose\\(\\))",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"C:\\\\Users\\\\soumu\\\\source\\\\FIGHTERS2\\\\fighter\\\\assets\\\\sprites\\\\leon\\\\walk_f\\\\05.png\"\\); \"walk_f/05.png: {0}x{1}\" -f $img.Width, $img.Height; $bmp = New-Object System.Drawing.Bitmap\\($img\\); for \\($y = $bmp.Height - 1; $y -ge $bmp.Height - 8; $y--\\) { $alpha_count = 0; for \\($x = 0; $x -lt $bmp.Width; $x++\\) { $c = $bmp.GetPixel\\($x, $y\\); if \\($c.A -gt 5\\) { $alpha_count++ } }; \"row y=$y : non-transparent px = $alpha_count\" }; $img.Dispose\\(\\); $bmp.Dispose\\(\\))",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; foreach \\($f in @\\(\"00.png\", \"05.png\"\\)\\) { $img = [System.Drawing.Image]::FromFile\\(\"C:\\\\Users\\\\soumu\\\\source\\\\FIGHTERS2\\\\fighter\\\\assets\\\\sprites\\\\leon\\\\walk_f\\\\$f\"\\); $bmp = New-Object System.Drawing.Bitmap\\($img\\); $samples = @\\(\\); foreach \\($pos in @\\(@\\(50, 50\\), @\\(50, 1500\\), @\\(900, 50\\), @\\(900, 1500\\), @\\(50, 750\\), @\\(900, 750\\)\\)\\) { $c = $bmp.GetPixel\\($pos[0], $pos[1]\\); $samples += \"\\($\\($pos[0]\\),$\\($pos[1]\\)\\)=A:$\\($c.A\\) RGB:\\($\\($c.R\\),$\\($c.G\\),$\\($c.B\\)\\)\" }; \"{0} → $\\($samples -join ' | '\\)\" -f $f; $img.Dispose\\(\\); $bmp.Dispose\\(\\) })"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "unity-mcp"
+  ]
+}

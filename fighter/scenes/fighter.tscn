@@ -1,0 +1,43 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://scripts/fighter/fighter.gd" id="1_fighter"]
+[ext_resource type="Script" path="res://scripts/fighter/state_machine.gd" id="2_sm"]
+[ext_resource type="Script" path="res://scripts/fighter/input_buffer.gd" id="3_ib"]
+[ext_resource type="Script" path="res://scripts/fighter/states/idle_state.gd" id="4_idle"]
+[ext_resource type="Script" path="res://scripts/fighter/states/walk_state.gd" id="5_walk"]
+[ext_resource type="Script" path="res://scripts/fighter/states/crouch_state.gd" id="6_crouch"]
+[ext_resource type="Script" path="res://scripts/fighter/states/jump_state.gd" id="7_jump"]
+
+[sub_resource type="RectangleShape2D" id="body_shape"]
+size = Vector2(50, 150)
+
+[node name="Fighter" type="CharacterBody2D"]
+script = ExtResource("1_fighter")
+player_id = 1
+facing = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -75)
+shape = SubResource("body_shape")
+
+[node name="InputBuffer" type="Node" parent="."]
+script = ExtResource("3_ib")
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("2_sm")
+initial_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource("4_idle")
+
+[node name="Walk" type="Node" parent="StateMachine"]
+script = ExtResource("5_walk")
+
+[node name="Crouch" type="Node" parent="StateMachine"]
+script = ExtResource("6_crouch")
+
+[node name="Jump" type="Node" parent="StateMachine"]
+script = ExtResource("7_jump")

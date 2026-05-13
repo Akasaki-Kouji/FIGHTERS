@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://d21bincv7dwre"]
+
+[ext_resource type="PackedScene" path="res://scenes/fighter.tscn" id="1_fighter"]
+[ext_resource type="Resource" path="res://resources/characters/leon.tres" id="2_leon"]
+
+[sub_resource type="RectangleShape2D" id="floor_shape"]
+size = Vector2(2000, 40)
+
+[sub_resource type="RectangleShape2D" id="wall_shape"]
+size = Vector2(40, 800)
+
+[node name="Main" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(640, 360)
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(640, 600)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+shape = SubResource("floor_shape")
+
+[node name="FloorVisual" type="ColorRect" parent="Floor"]
+offset_left = -1000.0
+offset_top = -20.0
+offset_right = 1000.0
+offset_bottom = 20.0
+color = Color(0.25, 0.27, 0.32, 1)
+
+[node name="LeftWall" type="StaticBody2D" parent="."]
+position = Vector2(-360, 200)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall"]
+shape = SubResource("wall_shape")
+
+[node name="RightWall" type="StaticBody2D" parent="."]
+position = Vector2(1640, 200)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall"]
+shape = SubResource("wall_shape")
+
+[node name="P1" parent="." instance=ExtResource("1_fighter")]
+position = Vector2(500, 580)
+character_data = ExtResource("2_leon")
+player_id = 1
+
+[node name="HintLabel" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 600.0
+offset_bottom = 80.0
+text = "P1: A/D=move  S=crouch  W=jump  J/K/L/;=attack(A/B/C/D)"

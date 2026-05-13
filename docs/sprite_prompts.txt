@@ -1,0 +1,103 @@
+================================================================
+FIGHTERS - ChatGPT (DALL-E) スプライト生成プロンプト集
+================================================================
+
+
+----------------------------------------------------------------
+1. キャラクターデザイン固定（最初にこれを生成する）
+----------------------------------------------------------------
+
+【レオン】
+Pixel art character design sheet for a 2D fighting game character named Leon.
+He is a tall young man with silver-white short hair, blue eyes, wearing a dark navy
+military-style jacket with gold trim, black pants, and boots.
+Art style: clean pixel art, 64x128 pixels per frame, transparent background,
+no anti-aliasing, limited palette (max 32 colors), sharp outlines.
+Show front-facing idle stance.
+
+----
+
+【ミナト】
+Pixel art character design sheet for a 2D fighting game character named Minato.
+He is a lean young man with dark navy short hair, red eyes, wearing a dark red
+sleeveless hoodie, black cargo pants, and red sneakers.
+Art style: clean pixel art, 64x128 pixels per frame, transparent background,
+no anti-aliasing, limited palette (max 32 colors), sharp outlines.
+Show front-facing idle stance.
+
+
+----------------------------------------------------------------
+2. アニメーション生成テンプレート
+   （[CHARACTER] と [ANIMATION] を下の表から差し替えて使う）
+----------------------------------------------------------------
+
+Pixel art sprite sheet for [CHARACTER] from a 2D fighting game.
+Character description: [1で固めたデザイン説明をそのまま貼る]
+
+Animation: [ANIMATION]
+Layout: horizontal strip, [FRAMES] frames side by side, no gaps.
+Each frame: 64x128 pixels, transparent background, no anti-aliasing.
+
+
+----------------------------------------------------------------
+3. アニメーション一覧
+----------------------------------------------------------------
+
+ファイル名          Animation に入れる文                              フレーム数
+---------------------------------------------------------------------------
+idle.png           idle breathing loop                                4
+walk_f.png         walk forward cycle                                 6
+walk_b.png         walk backward cycle                                4
+crouch.png         crouching pose, 2 frames                          2
+jump.png           jump: squat then airborne then landing             3
+atk_5a.png         light punch attack: windup, extend, recover        3
+atk_5b.png         medium kick attack: windup, extend, recover        3
+atk_5c.png         heavy slash attack: windup, extend, recover x2     4
+atk_5d.png         special step attack: lunge forward, strike, recover 3
+guard.png          blocking guard stance                              2
+hit_stand.png      hit reaction: flinch, stagger                     2
+knockdown.png      knockdown: falling, grounded, rising               3
+
+
+----------------------------------------------------------------
+4. 保存先
+----------------------------------------------------------------
+
+figters/assets/sprites/leon/idle.png
+figters/assets/sprites/leon/walk_f.png
+figters/assets/sprites/leon/walk_b.png
+figters/assets/sprites/leon/crouch.png
+figters/assets/sprites/leon/jump.png
+figters/assets/sprites/leon/atk_5a.png
+figters/assets/sprites/leon/atk_5b.png
+figters/assets/sprites/leon/atk_5c.png
+figters/assets/sprites/leon/atk_5d.png
+figters/assets/sprites/leon/guard.png
+figters/assets/sprites/leon/hit_stand.png
+figters/assets/sprites/leon/knockdown.png
+
+figters/assets/sprites/minato/idle.png
+figters/assets/sprites/minato/walk_f.png
+figters/assets/sprites/minato/walk_b.png
+figters/assets/sprites/minato/crouch.png
+figters/assets/sprites/minato/jump.png
+figters/assets/sprites/minato/atk_5a.png
+figters/assets/sprites/minato/atk_5b.png
+figters/assets/sprites/minato/atk_5c.png
+figters/assets/sprites/minato/atk_5d.png
+figters/assets/sprites/minato/guard.png
+figters/assets/sprites/minato/hit_stand.png
+figters/assets/sprites/minato/knockdown.png
+
+
+----------------------------------------------------------------
+5. コツ
+----------------------------------------------------------------
+
+- idle を何度か生成してデザインを固定してから他のアニメに移る
+- 横並びにならない場合は以下を追記して再生成:
+  "horizontal strip, all frames in a single row, no vertical stacking"
+- 背景が白い場合は Aseprite / GIMP / Photoshop で透過処理が必要
+- キャラの一貫性を保つため、同じキャラは同じチャットセッション内で生成する
+
+================================================================
